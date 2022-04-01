@@ -8,10 +8,14 @@ css' />
 <body>
     <h1><%= Cadastro %></h1>
         <form action="/new" method="POST">
-            <p>Titulo:<input type="text" name="titulo"/></p>
-            <p>Duracao:<input type="number" name="duracao" /></p>
-            <p>Sinopse:<input type="number" name="sinopse" /></p>
-            <p>Categoria:<input type="number" name="categoria" /></p>
+            <p>Titulo:<input type="text" name="titulo"value="<%= doc.titulo %>" /></p>
+
+            <p>Duracao:<input type="number" name="duracao" value="<%= doc.duracao %>" /></p>
+
+            <p>Sinopse:<input type="number" name="sinopse" value="<%= doc.sinopse %>" /></p>
+
+            <p>Categoria:<input type="number" name="categorias" value="<%= doc.categorias %>" /></p>
+
             <input type="submit" value="Salvar" />
         </form>
-</body
+</body>
