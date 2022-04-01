@@ -18,7 +18,7 @@ router.get('/new', (req, res, next) => {
 router.post('/new', async (req, res, next) => {
   const titulo = req.body.titulo;
   const sinopse = req.body.sinopse;
-  const duarcao = parseInt(req.body.duracao);
+  const duracao = parseInt(req.body.duracao);
   const categorias = req.body.categorias;
  
   try {
@@ -48,7 +48,7 @@ router.post('/edit/:id', async (req, res) => {
   const categorias = req.body.categorias;
  
   try {
-    const result = await global.db.update(id, { titulo, sinopse, duaracao, categorias});
+    const result = await global.db.update(id, { titulo, sinopse, duracao, categorias});
     console.log(result);
     res.redirect('/');
   } catch (err) {
